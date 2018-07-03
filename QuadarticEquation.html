@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Quadartic Equation</title>
+ <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Custom styles for this template -->	
+
+
+<style type="text/css">
+body {
+padding-top: 30px;
+}
+.form-control{
+max-width:60px;
+}
+h1 ,h2,h3{
+line -height:30px;
+}
+.well {
+margin-top:40px;
+heigth:100px;
+width:600px;
+}
+.display{
+font-size:15px;
+}
+</style>
+</head>
+<body onload="init();">
+
+    <div class="container">
+      <h2>Second Degree Equations</h2>
+
+      <div class="well">
+          <h3>Quadratic Equation:
+              <span id="a">a</span>x+
+              <span id="b">b</span>x +
+              <span id="c">c</span>
+          </h3>
+          <h4>Enter the coefficients of a, b and c in the field below.</h4>
+
+          <div class="form-group">
+              <label for="valueA">Value of a: </label>
+              <input type="number" placeholder="enter the value of a" class="form-control" id="valuea" onchange="updateEquation()" required/>
+          </div>
+          <div class="form-group">
+              <label for="valueB">Value of b: </label>
+              <input type="number" placeholder="enter the value of b" class="form-control" id="valueb" onchange="updateEquation()" required/>
+          </div>
+          <div class="form-group">
+              <label for="valueC">Value of c: </label>
+              <input type="number" placeholder="enter the value of c" class="form-control" id="valuec" onchange="updateEquation()" required/>
+          </div>
+          <button class="btn btn-primary" onclick="solve()">Solve Equation</button>
+      </div>
+
+      <div class="well">
+          Result:
+          <span id="result"></span>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+
+  </body>
+
+</html>
